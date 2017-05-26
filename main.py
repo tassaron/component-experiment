@@ -4,7 +4,6 @@ from PyQt4 import QtGui, QtCore, uic
 import sys, os
 import importlib
 from contextlib import suppress
-import components
 
 class MainState:
     def __init__(self):
