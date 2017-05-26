@@ -2,7 +2,9 @@
 
 from PyQt4 import QtGui, QtCore, uic
 import sys, os
+import importlib
 from contextlib import suppress
+import components
 
 class MainState:
     def __init__(self):
@@ -79,8 +81,7 @@ class Main(QtCore.QObject):
         self.window.videoPreview.setText(preview)
 
 def importComponent(name):
-    exec('from components import %s' % name)
-    return eval(name)
+    return importlib.import_module('components.%s' % name)
 
 def getListWidgetRows(self):
     for i in range(self.count()):
