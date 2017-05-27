@@ -1,2 +1,1 @@
-def startOfFrameRender():
-    return '4'
+''' another placeholder module '''
